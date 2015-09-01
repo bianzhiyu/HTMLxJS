@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Form Example</title>
+<script type="text/javascript">
+function validate()
+{
+	with(document.form1)
+	{
+		if (yourname.value.length<1)
+		{
+			alert("Please enter your name");
+			yourname.focus();
+			return false;
+		}
+		if (address.value.length<3)
+		{
+			alert("Please enter your address");
+			address.focus();
+			return false;
+		}
+		if (phone.value.length<3)
+		{
+			alert("Please enter your phone number");
+			phone.focus();
+			return false;
+		}
+		var cc=0;
+		for (var i=0;i<Email.length;i++)
+		{
+			if (Email[i]=="@")	cc=1;
+		}
+		if ((cc==0)||(Email.length<4))
+		{
+			alert("Illegal Email address!");
+			Email.focus();
+			return false;
+		}
+	}
+	return true;
+}
+</script>
+</head>
+<body>
+<h1>Form Example</h1>
+Enter the following information. when you press the Display button,
+the data you entered will be displayed in a pop-up window.
+<form name="form1" action="mailto:bianzhiyu@126.com" enctype="text/plain" method="POST" onSubmit="return validate();">
+<p><b>Name:</b><input type="text" size="20" name="yourname"></p>
+<p><b>ADD:</b><input type="text" size="20" name="address"></p>
+<p><b>Phone:</b><input type="text" size="20" name="phone"></p>
+<p><b>Email:</b><input type="text" size="20" name="Email"></p>
+<p><input type="submit" value="Submit"></p>
+</form>
+</body>
+</html>

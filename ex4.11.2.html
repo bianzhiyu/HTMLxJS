@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>ex4.11.2:Back and forward buttons</title>
+</head>
+<body>
+<h1>
+Back and forward buttons
+</h1>
+<p>
+This page allows you to get back or forward to pages in history list.
+These should be equivalent to the back and forward arrow button in the browser's toolbar.
+</p>
+<p>
+<input type="button"
+	onClick="history.back();alert(\"back!\");"
+	value="<-- Back">
+<input type="button"
+	onClick="location.reload();"
+	value="update">
+<input type="button"
+	onClick="history.forward();"
+	value="Forward -->">
+</p>
+<p>
+<input type="button"
+	onClick="alert("lalala");"
+	value="Alert">
+</p>
+<p>
+<script>
+now = new Date();
+document.write("history.length="+history.length);
+document.write("<br>time="+now.toString()+"<br>");
+</script>
+</p>
+aaaabb4.11.2
+</body>
+</html>

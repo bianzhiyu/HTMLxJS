@@ -1,0 +1,27 @@
+<HTML>
+<HEAD>
+<TITLE>EX6.4</TITLE>
+</HEAD>
+<BODY>
+<H1>Practice for prototype</H1>
+<script type="text/javascript">
+var str=new String("Aaaaa");
+document.write(str+"<br />");
+str.x="bbbb";
+document.write(str.x+"<br />");
+function addhead(level)
+{
+	h="H"+level;
+	start="<"+h+">";
+	text=this.toString();
+	stop="</"+h+">";
+	return start+text+stop;
+}
+String.prototype.heading=addhead;
+
+document.write("head 1".heading(1));
+document.write("head 2".heading(2));
+document.write("head 3".heading(3));
+</script>
+</BODY>
+</HTML>

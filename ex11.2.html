@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Form Example</title>
+<script type="text/javascript">
+function display()
+{
+	dispwin=window.open("","NewWin","toolbar=no,status=no,width=300,height=200");
+	with(document.form1)
+	{
+		var str="<ul><li>Name:</b>"+yourname.value+
+		"<li><b>ADD:</b>"+address.value+
+		"<li><b>Phone:</b>"+phone.value+"</ul>";
+	}
+	dispwin.document.open();
+	dispwin.document.write(str);
+	dispwin.document.close();
+}
+function tout()
+{
+	//document.write("<br>aaaaa");
+
+	dispwin.document.open();
+	dispwin.document.write("aaaaa");
+	dispwin.document.close();
+}
+</script>
+</head>
+<body>
+<h1>Form Example</h1>
+Enter the following information. when you press the Display button,
+the data you entered will be displayed in a pop-up window.
+<form name="form1">
+<p><b>Name:</b><input type="text" size="20" name="yourname"></p>
+<p><b>ADD:</b><input type="text" size="20" name="address"></p>
+<p><b>Phone:</b><input type="text" size="20" name="phone"></p>
+<p><input type="button" value="display" onClick="display();"></p>
+</form>
+<p><input type="button" value="testout" onClick="tout();"></p>
+</body>
+</html>

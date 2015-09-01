@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Anchors</title>
+</head>
+<body>
+<a name="beginning">
+<h1>beginning</h1>
+</a>
+
+<script type="text/javascript">
+for (i=1;i<=10;i++)
+{
+	document.write("part \""+i);
+
+	document.write("<a name=\"part "+i+"\">");
+	document.write("</a>");
+	document.write("<p>Paragragh "+i+"<br></p>");
+
+	document.write("<p>");
+	for (j=1;j<=i;j++)
+	{
+		document.write(j+" ");
+	}
+	document.write("<br>");
+	for (j=1;j<=i;j++)
+	{
+		document.write(j+" ");
+	}
+	document.write("</p>");
+}
+</script>
+
+<a href = "#beginning">
+<b>click to return beginning</b>
+</a>
+<br>
+<script type="text/javascript">
+for (i=1;i<=10;i++)
+{
+document.write(  "<a href=\"#part "+i+"\">return part "+i+"</a><br>");
+}
+</script>
+<br>
+<script>
+document.write("document.anchors.length = "+document.anchors.length);
+</script>
+</body>
+</html>

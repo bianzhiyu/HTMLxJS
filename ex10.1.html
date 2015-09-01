@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>ex10.1:Create a New Window</title>
+<script type="text/javascript">
+function action1()
+{
+	NewWin=window.open('','NewWin','toolbar=no,status=no,width=200,height=100');
+	//if changing NewWin to x, action2() can not get this window
+
+	obj=document.getElementById("output");
+	obj.innerHTML="Open\n";
+	obj.innerHTML+=x;
+
+	y="lalala";
+}
+function action2()
+{
+	NewWin.close();
+	obj=document.getElementById("output");
+	obj.innerHTML="Closed\n";
+
+	obj.innerHTML+=y;
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+document.write("hello<br />");
+var n=window.top;
+document.write(n);
+</script>
+<h1>Create a New Window</h1>
+<hr />
+<form name="winform">
+<input type="button" value="Open New Window"
+	onClick="action1();" />
+<p>
+<input type="button" value="Close New Window"
+	onClick="action2();" />
+</p>
+<p>
+<input type="button" value="Close Main Window"
+	onClick="" />
+</p>
+</form>
+<br /><p>Have fun!</p>
+<hr />
+<p id="output">
+</p>
+<script type="text/javascript">
+var x="show";
+</script>
+</body>
+</html>

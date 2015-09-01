@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>e5.1</title>
+</head>
+<body>
+<p>
+<h1>Test for String</h1>
+<script type="text/javascript">
+document.write(parseInt("30 days"));
+document.write("<br>");
+document.write(parseInt("a"));
+document.write("<br><br>");
+
+str="123012301230";
+substr=123;
+document.write("str="+str+"<br>");
+document.write("substr="+substr+"<br><br>");
+document.write("str.indexOf(substr)="+str.indexOf(substr)+"<br>");
+document.write("str.indexOf(substr,1)="+str.indexOf(substr,1)+"<br>");
+document.write("str.lastIndexOf(substr)="+str.lastIndexOf(substr)+"<br>");
+document.write("str.lastIndexOf(substr,str.length-1)="+str.lastIndexOf(substr,str.length-1)+"<br>");
+document.write("str.lastIndexOf(substr,str.length-2)="+str.lastIndexOf(substr,str.length-2)+"<br>");
+document.write("str.indexOf(\"a\")="+str.indexOf("a")+"<br>");
+document.write("str.lastIndexOf(\"a\")="+str.lastIndexOf("a")+"<br>");
+</script>
+</p>
+<p>
+<h1>Test for Array</h1>
+<script type="text/javascript">
+arr1=new Array(1,2,3,4);
+document.write("arr1:<br>");
+for (i=0;i<4;i++)
+{
+document.write(arr1[i]+"  ");
+}
+document.write("<br>");
+arr1[4]=5;
+document.write("<br>arr1[5]:<br>"+arr1[5]+"<br>");
+arr2=new Array(10);
+document.write("<br>arr2[5]:<br>"+arr2[5]+"<br>");
+arr3=[1,2,3,4];
+document.write("<br>");
+document.write(arr3);
+document.write("<br>");
+document.write(arr3[4]);
+document.write("<br>");
+document.write(arr3.length);
+</script>
+</p>
+<p>
+<script type="text/javascript">
+pp=["aa","b","ccc"];
+s=pp.join(" ");
+s2=pp.join();
+document.write(s+"<br>");
+document.write(s2+"<br>");
+s3=pp.join(",.");
+document.write(s3);
+document.write("<br>");
+p2=s3.split(".");
+document.write(p2+"<br>");
+document.write("s3=<br>"+s3+"<br>");
+p3=s3.split(",.");
+s4=p3.join("   x ");
+document.write(s4+"<br>");
+document.write(s4.length+"<br>");
+</script>
+</p>
+
+<p>
+<h1>Sorting String Array</h1>
+<script type="text/javascript">
+a=["AB","ab","CA","B","C"];
+document.write("a(before sorting):<br>");
+document.write(a+"<br>");
+document.write("a(after sorting):<br>");
+b=a.sort();
+document.write(a+"<br>");
+</script>
+</p>
+
+
+
+</body>
+</html>

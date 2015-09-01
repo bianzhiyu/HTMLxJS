@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Displaying Keypresses</title>
+<script type="text/javascript">
+function DisplayKey(e)
+{
+	if (!e)	e=window.event;
+	if (e.keyCode) keycode=e.keyCode;
+	else keycode=e.which;
+	character=String.fromCharCode(keycode);
+	k=document.getElementById("keys");
+	k.innerHTML+=character;
+	//1.1,1.2,1.3
+	//k.innerHTML+=now.toUTCString();
+	//k.innerHTML+=event.type;
+}
+</script>
+</head>
+<body onKeyPress="DisplayKey(event);">
+<h1>Displaying Typed Characters</h1>
+<p>This document includes a simple script that displays the keys
+you type in the paragragh below. Type a few keys and try it.</p>
+<p id="keys">
+</p>
+<script type="text/javascript">
+now=new Date();
+document.write("now=<br />"+now.toUTCString());
+</script>
+</body>
+</html>
+
+<!--
+compare codes below:
+version1:<body onKeyPress="DisplayKey(event);">
+version2:<body onKeyPress="event=1;DisplayKey(event);alert('!!');">
+
+choose <body onKeyPress="DisplayKey(event);">
+version1.1:k.innerHTML+=now.toUTMString();
+		run as planned
+version1.2:k.innerHTML+=e.type;
+		run as planned
+version1.3:k.innerHTML+=event.type;
+		run as planned
+-->

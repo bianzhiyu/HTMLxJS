@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>function</title>
+<script type="text/javascript">
+function factor(i)
+{
+	if (i<=0) return 1;
+	return factor(i-1)*i;
+}
+function Greeting()
+{
+	alert("Greetings .");
+}
+function Greeting(who)
+{
+	alert("Greetings , "+who);
+}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+Greeting("aa");
+Greeting();
+document.write("factor(5) = "+factor(5)+"<br>");
+x=new Array(1,2,"aa");
+document.write(x+"<br>");
+y=new String("sss");
+document.write(y+"<br>");
+</script>
+</body>
+</html>

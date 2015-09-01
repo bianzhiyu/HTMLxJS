@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>ex8.1:Test Math</title>
+</head>
+<body>
+<h1>Test for Math</h1>
+<script type="text/javascript">
+document.write("<p>");
+document.write(Math.random()+"<br />\n");
+document.write(Math.sin(Math.PI/6)+"<br />\n");
+document.write("</p>");
+
+document.write("<p>");
+var bar=new Array(100);
+for (var i=0;i<100;i++)
+	bar[i]=0;
+var sum=0;
+var time=1000000
+for (var i=0;i<time;i++)
+{
+	tmp=Math.random();
+	sum+=tmp;
+	if (tmp==1) bar[99]++;
+	else bar[Math.floor(tmp*100)]++;
+}
+document.write("<h2>Average= "+(sum/time)+"</h2>");
+for (var i=0;i<100;i++)
+{
+	document.write((i/100)+" : "+bar[i]+"<br />\n");
+}
+document.write("</p>");
+var i1=10;
+var i2=3;
+document.write("<p>"+i1/i2+"</p>");
+</script>
+</body>
+</html>
