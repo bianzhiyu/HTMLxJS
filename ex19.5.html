@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex19.5: Animated SlideShow</title>
+    <!--<script type="text/javascript" src="ex19.4.js"></script>-->
+    <!-- <link rel="stylesheet" type="text/css" href="ex19.4.css">-->
+    <style>
+        img.slide { opacity: 100;}
+    </style>
+</head>
+<body>
+<div id="slideshow">
+    <img class="slide" src="slide1.jpg" width="400" height="300" id="im1">
+</div>
+<form>
+    <input type="button" onclick="upt();" value="fade">
+</form>
+<script type="text/javascript">
+    var x=100;
+    var oo=document.getElementById("im1");
+    oo.style.opacity=20;
+    function upt()
+    {
+        oo.style.opacity=x;
+        x-=2;
+        if (x==0) window.setTimeout("upt();",500);
+        else x=100;
+    }
+</script>
+</body>
+</html>

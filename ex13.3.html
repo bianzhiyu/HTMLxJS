@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex13.3:Positioning Elements with JavaScript</title>
+    <script type="text/javascript" src="ex13.3.js">
+    </script>
+    <style>
+        #square
+        {
+            position:absolute;
+            top:150px;
+            left:100px;
+            width:200px;
+            height:200px;
+            border:2px solid black;
+            padding:10px;
+            background-color:#E0E0E0;
+        }
+    </style>
+</head>
+<h1>Positioning Elements</h1>
+<hr>
+<form name="form1" id="form1">
+    <input type="button" name="left" value="<-Left" onclick="pos(-1,0);">
+    <input type="button" name="right" value="Right->" onclick="pos(1,0);">
+    <input type="button" name="up" value="Up" onclick="pos(0,-1);">
+    <input type="button" name="down" value="Down" onclick="pos(0,1);">
+    <input type="button" name="hide" value="hide" onclick="hidesquare();">
+    <input type="button" name="show" value="show" onclick="showsquare();">
+</form>
+<hr>
+<p  id="square">this is a testing paragraph</p>
+<hr>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex14.5</title>
+    <script type="text/javascript">
+        function act1()
+        {
+            var node=document.createTextNode("this is a test.");
+            document.getElementById("p1").appendChild(node);
+            document.body.appendChild(document.createTextNode("TTT2"));
+        }
+    </script>
+</head>
+<body>
+<p id="p1">paragraph 1.11111111111xxxxxxxxxxxx<br>
+    xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+<form>
+    <input type="button" value="add text;" onclick="act1();"
+</form>
+</body>
+</html>

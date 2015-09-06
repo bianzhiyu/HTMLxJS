@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>ex11.1.1</title>
+<script type="text/javascript">
+function act1()
+{
+	//obj=document.getElementById("text11");
+	obj=document.form1.text1;
+	obj.value=document.form1.text2.defaultValue;
+	document.form1.text2.value="bbb";
+}
+function act2()
+{
+	obj=document.getElementById("checkbox");
+	obj.click();
+}
+function actremove()
+{
+	selbox=document.getElementById("selbox1");
+	selbox.remove(0);
+}
+function actclearall()
+{
+	selbox=document.getElementById("selbox1");
+	var len=selbox.length;
+	for (var i=0;i<len;i++)
+		selbox.removeChild(selbox.options[0]);
+}
+function actpushdown()
+{
+	s1=document.getElementById("selbox1");
+	if (s1.selectedIndex==-1) return;
+	op=s1.options[s1.selectedIndex];
+	s2=document.getElementById("selbox2");
+	var newOption=new Option(op.text,op.value);
+	s1.remove(s1.selectedIndex);
+	s2.add(newOption,undefined);
+
+	//s2.appendChild(s1.options[s1.selectedIndex]);
+	//the one line code before can replace codes all above
+}
+</script>
+</head>
+<body>
+<form name="form1">
+<input type="text" name="text1" value="def" size="40" id="text11">
+<textarea name="text2" rows="3" cols="70">
+default
+</textarea>
+<p>
+<input type="button" value="Press"
+	onClick="act1();">
+</p>
+<p>
+<input id="checkbox" type="checkbox" name="check1" value="yes">
+</p>
+<p>
+<input type="button" value="change" onClick="act2();">
+</p>
+<p>
+<input type="radio" name="radio1" value="Option1" checked>Option1
+<input type="radio" name="radio1" value="Option2">Option2
+<input type="radio" name="radio1" value="Option3">Option3
+</p>
+<p>
+<select name="select1" size="10" id="selbox1">
+<option value="choice1" selected>First choice.
+<option value="choice2">Second choice.
+<option value="choice3">Third choice.
+<option value="choice4">Fourth choice.
+</select>
+</p>
+<input type="button" value="pushdown" onClick="actpushdown();">
+<input type="button" value="remove" onClick="actremove();">
+<input type="button" value="clearall" onClick="actclearall();">
+<p>
+<select name="select1" size="10" id="selbox2">
+</select>
+</p>
+</form>
+
+
+<script type="text/javascript">
+document.form1.radio1[1].checked=true;
+document.form1.radio1[2].checked=true;
+</script>
+</body>
+</html>

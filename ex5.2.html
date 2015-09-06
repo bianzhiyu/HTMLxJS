@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>ex5.2</title>
+</head>
+<body>
+<p>
+<script type="text/javascript">
+document.write("<h1>Sorting Number Array</h1>");
+function numcompare(a,b)
+{
+	return a-b;
+}
+
+document.write("aaa<br>bbb<br>");
+nums=[30,10,200,4];
+document.write("num(before sorting):<br>"+nums+"<br>");
+r1=nums.sort();
+document.write("num(after sorting):<br>"+nums+"<br>");
+document.write("r1=<br>"+r1+"<br>");
+r2=nums.sort(numcompare);
+document.write("r2=<br>"+r2+"<br>");
+r3=nums.sort();
+document.write("r3=<br>"+r3+"<br>");
+</script>
+</p>
+
+<p>
+<script type="text/javascript">
+document.write("<h1>Sorting Number Array</h1>");
+function numcompare(a,b)
+{
+	if (a>b) return true;
+	return false;
+}
+
+document.write("aaa<br>bbb<br>");
+nums=[30,10,200,4];
+document.write("num(before sorting):<br>"+nums+"<br>");
+r1=nums.sort();
+document.write("num(after sorting):<br>"+nums+"<br>");
+document.write("r1=<br>"+r1+"<br>");
+r2=nums.sort(numcompare);
+document.write("r2=<br>"+r2+"<br>");
+r3=nums.sort();
+document.write("r3=<br>"+r3+"<br>");
+</script>
+</p>
+</body>
+</html>

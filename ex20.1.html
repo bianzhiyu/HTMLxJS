@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex20.1:Sound Test</title>
+    <script type="text/javascript">
+        function PlaySound()
+        {
+            var sound = document.getElementById("node_c1");
+            try
+            {
+                sound.DoPlay();
+            }
+            catch(err)
+            {
+                try
+                {
+                    sound.Play();
+                }
+                catch(err2)
+                {
+                    alert("No Sound suppprt!");
+                }
+            }
+        }
+        function StopSound()
+        {
+            var sound = document.getElementById("node_c1");
+            sound.Stop();
+        }
+        function RewindSound()
+        {
+            var sound = document.getElementById("node_c1");
+            sound.Rewind();
+        }
+    </script>
+</head>
+<body>
+<h1>sound test</h1>
+<embed id="note_c1" src="sanguolian.mp3" width="0" height="0" autostart="false"
+        enablejavasript="true"></embed>
+<input type="button" value="Play the sound" onclick="PlaySound();">
+<input type="button" value="Stop" onclick="StopSound();">
+<input type="button" value="Rewind" onclick="RewindSound();">
+</body>
+</html>

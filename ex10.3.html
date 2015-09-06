@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Timeout Example</title>
+<script type="text/javascript">
+var counter=0;
+ID=window.setTimeout("Update();",2000);
+function Update()
+{
+	counter++;
+	document.form1.input1.value="The counter is now at "+counter;
+	ID=window.setTimeout("Update();",2000);
+}
+</script>
+</head>
+<body>
+<p>
+<h1>Timeout test</h1>
+</p><hr />
+<form name="form1">
+<input type="text" name="input1" size="40" /><br />
+<input type="button" value="Reset" onClick="counter=0;" /><br />
+<input type="button" value="Stop" onClick="window.clearTimeout(ID);" />
+</form>
+<hr />
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex13.1</title>
+    <style type="text/css">
+        #layer1
+        {
+            position:absolute;
+            background-image:url("pic3.gif");
+            width:500px;
+            height:500px;
+            left:100px;
+            top:100px;
+            clip:rect(auto,auto,auto,auto);
+        }
+    </style>
+</head>
+<body>
+<h1>headline</h1>
+<p>paragragh1</p>
+<form>
+    <input type="button" value="back to left" onclick="tmp=0;">
+</form>
+
+<div id="layer1">
+    <p>Contenttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt</p>
+</div>
+<p>paragragh2:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.</p>
+<script type="text/javascript">
+    var tmp=0;
+    function mscroll()
+    {
+        var d=document.getElementById("layer1");
+        tmp=(tmp+5)%500;
+        d.style.left=tmp+"px";
+        window.setTimeout("mscroll();",100);
+    }
+    mscroll();
+</script>
+</body>
+</html>

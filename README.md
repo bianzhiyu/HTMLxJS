@@ -1,0 +1,2 @@
+# HTMLxJS
+exercises when learning

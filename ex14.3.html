@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex14.3</title>
+    <script type="text/javascript">
+        function action1()
+        {
+            var head1=document.getElementById("head1");
+            head1.firstChild.nodeValue="New text";
+            alert(head1.firstChild.nodeName);
+        }
+    </script>
+</head>
+<body>
+<h1 id="head1">This is head.</h1>
+<br>
+<form id="form1">
+    <input type="button" value="ChangeHead" onclick="action1();">
+</form>
+</body>
+</html>

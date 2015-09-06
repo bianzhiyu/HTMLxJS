@@ -1,0 +1,16 @@
+img.slide
+{
+    position:absolute;
+    left:0px;
+    top:0px;
+    opacity: 100;
+}
+#slideshow
+{
+    position:relative;
+    left:0px;
+    top:0px;
+    overflow:hidden;
+    width:400px;
+    height:300px;
+}
